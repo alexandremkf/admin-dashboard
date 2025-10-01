@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar + Conteúdo */
+  grid-template-rows: 80px 1fr;    /* Header + Main */
+  height: 100vh;
+}
+
+.sidebar {
+  grid-row: 1 / 3; /* Sidebar ocupa 2 linhas */
+  background: #1976d2;
+  color: white;
+  padding: 20px;
+}
+
+.header {
+  grid-column: 2;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.main {
+  grid-column: 2;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Conteúdo + Sidebar direita */
+  grid-gap: 20px;
+}
+
+/* Dentro do main */
+.projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
