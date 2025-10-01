@@ -21,6 +21,38 @@ body {
   background: #1976d2;
   color: white;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  margin: 12px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.sidebar .icon {
+  text-align: center;
+  font-size: 18px;
 }
 
 .header {
