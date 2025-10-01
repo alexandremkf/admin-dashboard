@@ -108,8 +108,37 @@ body {
   grid-column: 2;
   padding: 20px;
   display: grid;
-  grid-template-columns: 3fr 1fr; /* Conteúdo + Sidebar direita */
+  grid-template-columns: 3fr 1fr; /* Esquerda maior que direita */
   grid-gap: 20px;
+}
+
+/* --- Projects --- */
+.projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.projects .card {
+  border-left: 5px solid #ffb300; /* destaque igual ao exemplo */
+}
+
+/* --- Announcements --- */
+.announcements .card {
+  margin-bottom: 15px;
+}
+
+/* --- Trending --- */
+.trending .card {
+  margin-bottom: 10px;
+}
+
+/* Estilo geral dos cards */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 /* Dentro do main */
