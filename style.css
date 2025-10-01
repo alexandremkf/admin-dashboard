@@ -58,11 +58,50 @@ body {
 .header {
   grid-column: 2;
   background: white;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto auto; /* Search | User Info | Botões */
   align-items: center;
   padding: 0 20px;
   border-bottom: 1px solid #ddd;
+  gap: 20px;
+}
+
+/* Barra de busca */
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+/* User Info */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+/* Botões */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #1565c0;
 }
 
 .main {
