@@ -182,3 +182,46 @@ p {
 .projects .card {
   border-left: 5px solid #ffb300; /* destaque amarelo */
 }
+
+/* Layout responsivo */
+@media (max-width: 1000px) {
+  .main {
+    grid-template-columns: 1fr; /* tudo em uma coluna */
+  }
+
+  .announcements, .trending {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Sidebar fica mais compacta */
+  .sidebar {
+    padding: 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 16px;
+  }
+
+  .sidebar li {
+    font-size: 14px;
+    grid-template-columns: 25px 1fr;
+  }
+
+  /* Header reorganiza */
+  .header {
+    grid-template-columns: 1fr; /* empilha */
+    gap: 10px;
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  /* Cards de projeto menores */
+  .projects .cards {
+    grid-template-columns: 1fr; /* todos empilhados */
+  }
+}
