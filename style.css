@@ -5,8 +5,21 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #f4f6f9;
+  color: #333;
+}
+
+/* Títulos */
+h2, h3, h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Textos menores */
+p {
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .container {
@@ -17,7 +30,7 @@ body {
 }
 
 .sidebar {
-  grid-row: 1 / 3; /* Sidebar ocupa 2 linhas */
+  grid-row: 1 / 3;
   background: #1976d2;
   color: white;
   padding: 20px;
@@ -27,6 +40,8 @@ body {
 }
 
 .sidebar h2 {
+  font-weight: 700;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
@@ -42,6 +57,7 @@ body {
   margin: 12px 0;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .sidebar li:hover {
@@ -59,7 +75,7 @@ body {
   grid-column: 2;
   background: white;
   display: grid;
-  grid-template-columns: 1fr auto auto; /* Search | User Info | Botões */
+  grid-template-columns: 1fr auto auto;
   align-items: center;
   padding: 0 20px;
   border-bottom: 1px solid #ddd;
@@ -73,6 +89,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 20px;
   outline: none;
+  font-size: 14px;
 }
 
 /* User Info */
@@ -80,27 +97,22 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 /* Botões */
-.actions {
-  display: flex;
-  gap: 10px;
-}
-
-.btn {
+.actions .btn {
   background: #1976d2;
   color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 20px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
   transition: 0.2s ease;
 }
 
-.btn:hover {
+.actions .btn:hover {
   background: #1565c0;
 }
 
@@ -144,6 +156,11 @@ body {
   justify-content: space-between;
 }
 
+.card h4 {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
 .card-actions {
   display: flex;
   justify-content: flex-end;
@@ -162,8 +179,6 @@ body {
 }
 
 /* Dentro do main */
-.projects .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+.projects .card {
+  border-left: 5px solid #ffb300; /* destaque amarelo */
 }
